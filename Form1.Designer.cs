@@ -39,26 +39,31 @@ namespace WinFormsApp1
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(25, 55);
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Location = new Point(59, 28);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(202, 23);
+            textBox1.Size = new Size(542, 27);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 24);
+            label1.Location = new Point(14, 32);
             label1.Name = "label1";
-            label1.Size = new Size(124, 15);
+            label1.Size = new Size(40, 20);
             label1.TabIndex = 1;
-            label1.Text = "Unesite put do foldera";
+            label1.Text = "Path:";
             label1.Click += label1_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(277, 55);
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.Location = new Point(742, 28);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(115, 27);
+            button1.Size = new Size(131, 36);
             button1.TabIndex = 2;
             button1.Text = "Browse";
             button1.UseVisualStyleBackColor = true;
@@ -66,10 +71,12 @@ namespace WinFormsApp1
             // 
             // checkBox1
             // 
+            checkBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(25, 96);
+            checkBox1.Location = new Point(621, 33);
+            checkBox1.Margin = new Padding(3, 4, 3, 4);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(119, 19);
+            checkBox1.Size = new Size(80, 24);
             checkBox1.TabIndex = 3;
             checkBox1.Text = "Hidden";
             checkBox1.UseVisualStyleBackColor = true;
@@ -77,22 +84,27 @@ namespace WinFormsApp1
             // 
             // listView1
             // 
-            listView1.Location = new Point(124, 190);
+            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listView1.Location = new Point(27, 108);
+            listView1.Margin = new Padding(3, 4, 3, 4);
             listView1.Name = "listView1";
-            listView1.Size = new Size(380, 183);
+            listView1.Size = new Size(845, 457);
             listView1.TabIndex = 4;
             listView1.UseCompatibleStateImageBehavior = false;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(listView1);
             Controls.Add(checkBox1);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(textBox1);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(500, 400);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
